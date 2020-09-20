@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'partials/_header.html' %}
+
+
+{% if object_list.exists %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for obj in object_list %}
+      <tr>
+        <th scope="row"> {{ obj.id }}</th>
+        <td> <a href="{{ obj.get_absolute_url }} "> {{ obj.title }}</a>
+            {% include 'carts/update_cart.html' with food=obj cart=cart in_cart=True %}
+        </td>
+        <td>{{ obj.price}} </td>
+        
+       
+      </tr>
+      {% endfor %}
+
+      <tr>
+        <td colspan='2'></td>
+        
+        <td><b>Total: </b>{{ total }} </td>
+      </tr>
+      <tr>
+        <td colspan='2'></td>
+        <td><a class="btn btn-lg btn-success" href=" {% url 'pages:checkout' %} ">Checkout</a></td>
+      </tr>
+    </tbody>
+  </table>
+{% endif %}
+
+
+{% endblock %}			
+			<!-- =========================== Add To Cart =================================== -->

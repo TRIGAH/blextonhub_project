@@ -1,0 +1,356 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'partials/_header.html' %}
+{% include 'partials/_navbar.html' %}
+
+<!-- ======================== Top category ==================== -->
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="category_style_2">
+                    <div class="category_style_2_thumb">
+                        <a href="{% url 'food:food' %}"><img src="{% static 'img/grocery/1.png' %}" class="img-fluid rounded" alt="" /></a>
+                    </div>
+                    <div class="category_style_2_caption">
+                        <!-- Heading -->
+                        <h4 class="mb-0"><a href="{% url 'food:food' %}">Ghanished Spaghetti</a></h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="category_style_2">
+                    <div class="category_style_2_thumb">
+                        <a href="{% url 'fashion:fashion' %}"><img src="{% static 'img/fashion/e.png' %}" class="img-fluid rounded" alt="" /></a>
+                    </div>
+                    <div class="category_style_2_caption">
+                        <!-- Heading -->
+                        <h4 class="mb-0"><a href="{% url 'fashion:fashion' %}">Shoes</a></h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="category_style_2">
+                    <div class="category_style_2_thumb">
+                        <a href="{% url 'fashion:fashion' %}"><img src="{% static 'img/women/4.png' %}" class="img-fluid rounded" alt="" /></a>
+                    </div>
+                    <div class="category_style_2_caption">
+                        <!-- Heading -->
+                        <h4 class="mb-0"><a href="{% url 'fashion:fashion' %}">Fashion</a></h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="category_style_2">
+                    <div class="category_style_2_thumb">
+                        <a href="{% url 'skincare:skincare' %}"><img src="{% static 'img/fashion/b.png' %}" class="img-fluid rounded" alt="" /></a>
+                    </div>
+                    <div class="category_style_2_caption">
+                        <!-- Heading -->
+                        <h4 class="mb-0"><a href="{% url 'skincare:skincare' %}">Perfume</a></h4>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- ======================== Top category End ==================== -->
+
+<!-- ======================== Featured Accessiries Start ==================== -->
+<!-- <section class="pt-0 pb-5">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="sec-heading-flex pl-2 pr-2">
+                    <div class="sec-heading-flex-one">
+                        <h2>Food</h2>
+                    </div>
+                    <div class="sec-heading-flex-last">
+                        <a href="{% url 'food:food' %}" class="btn btn-theme">View More<i class="ti-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="owl-carousel products-slider owl-theme">
+                 -->
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <span class="woo_pr_tag hot">Hot</span>
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'img/furniture/1.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div> -->
+                    
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'img/furniture/2.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div>
+                     -->
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <span class="woo_pr_tag new">New</span>
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'img/furniture/3.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div> -->
+                    
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <span class="woo_offer_sell">Save 20% Off</span>
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'img/furniture/4.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div>
+                     -->
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <span class="woo_pr_tag hot">Hot</span>
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'img/furniture/5.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div> -->
+                    
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'img/furniture/6.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div> -->
+                    
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <span class="woo_pr_tag hot">Hot</span>
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'mg/furniture/7.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div> -->
+                    
+                    <!-- Single Item -->
+                    <!-- <div class="item">
+                        <div class="woo_product_grid">
+                            <span class="woo_pr_tag new">New</span>
+                            <div class="woo_product_thumb">
+                                <img src="{% static 'img/furniture/8.png' %}" class="img-fluid" alt="" />
+                            </div>
+                            <div class="woo_product_caption center">
+                                <div class="woo_rate">
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star filled"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="woo_title">
+                                    <h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a></h4>
+                                </div>
+                                <div class="woo_price">
+                                    <h6>$72.47<span class="less_price">$112.10</span></h6>
+                                </div>
+                            </div>
+                            <div class="woo_product_cart hover">
+                                <ul>
+                                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#viewproduct-over" class="woo_cart_btn btn_cart"><i class="ti-eye"></i></a></li>
+                                    <li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i class="ti-shopping-cart"></i></a></li>
+                                    <li><a href="wishlist.html" class="woo_cart_btn btn_save"><i class="ti-heart"></i></a></li>
+                                </ul>
+                            </div>								
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- <div class="clearfix"></div> -->
+<!-- ======================== Featured Accessiries End ==================== -->
+
+<!-- ======================== Trending Products Start ==================== -->
+
+<!-- ======================== Hot Deals End ==================== -->
+
+<!-- ============================ Call To Action ================================== -->
+
+{% endblock %}

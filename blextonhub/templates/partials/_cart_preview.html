@@ -1,0 +1,35 @@
+<div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right"  style="display:none;right:0;" id="rightMenu">
+    <div class="rightMenu-scroll">
+        <h4 class="cart_heading">Your cart</h4>
+        <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large"><i class="ti-close"></i></button>
+        <div class="right-ch-sideBar" id="side-scroll">
+            {% for obj in object_list %}
+            <div class="cart_select_items">
+                <!-- Single Item -->
+                <div class="cart_selected_single">
+                    <div class="cart_selected_single_thumb">
+                        <a href="#"><img src="{{ obj.image.url }} " class="img-fluid" alt="" /></a>
+                    </div>
+                    <div class="cart_selected_single_caption">
+                        <h4 class="product_title">{{ obj.title }}</h4>
+                        <span class="numberof_item">{{ obj.price }} </span>
+                        {% include 'carts/update_cart.html' with food=obj cart=cart in_cart=True %}
+                    </div>
+                </div>
+                {% endfor %}
+                
+            
+            <div class="cart_subtotal">
+                <h6>Total<span class="theme-cl">{{ total }}</span></h6>
+            </div>
+            
+            <div class="cart_action">
+                <ul>
+                    <li><a href="{% url 'cart:home' %} " class="btn btn-go-cart btn-theme">View/Edit Cart</a></li>
+                    <li><a href="{% url 'pages:checkout' %} " class="btn btn-checkout">Checkout Now</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>

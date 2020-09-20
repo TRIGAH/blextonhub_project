@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'partials/_header.html' %}
+			
+			<!-- ======================== Banner End ==================== -->
+			
+			<!-- ======================== Fresh Money Plants Start ==================== -->
+			<section >
+				
+				<div class="container">
+					
+					<div class="row">
+					  <!-- Listing 1 -->
+			{% for food_items in food %}
+					  <div class=" col-md-6 col-lg-4 mb-4">
+						<div class="card-body listing-preview">
+						  <img class="card-img-top" src="{{ food_items.image.url }}" class="img-fluid rounded" alt="">
+						</div>
+						  <div class="card-img-overlay">
+							<h2>
+							  <span class="theme-cl">{{ food_items.title }}</span>
+							</h2>
+						  </div>
+						  <div class="card-body">
+							<div class="listing-heading text-center">
+							  <h4 class="theme-cl">{{ food_items.price }}</h4>
+							  <p>
+								<i class="fas fa-map-marker text-secondary"></i>{{ food_items.description }}</p>
+							</div>
+							<hr>
+							<hr>
+							<!-- <a href="listing.html" class="btn btn-theme">Add To Cart</a> -->
+							<div class="col-12 col-md-6">
+								{% include 'carts/update_cart.html' with food=food_items cart=cart %}
+							   
+							</div>
+						  </div>
+						
+					</div>
+					{% if in_cart %}
+					<div class="w3-ch-sideBar w3-bar-block w3-card-2 w3-animate-right"  style="display:none;right:0;" id="rightMenu">
+						<div class="rightMenu-scroll">
+							<h4 class="cart_heading">Your cart</h4>
+							<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large"><i class="ti-close"></i></button>
+							<div class="right-ch-sideBar" id="side-scroll">
+							
+								<div class="cart_select_items">
+									<!-- Single Item -->
+									<div class="cart_selected_single">
+										<div class="cart_selected_single_thumb">
+											<a href="#"><img src="{{ food_items.image.url }} " class="img-fluid" alt="" /></a>
+										</div>
+										<div class="cart_selected_single_caption">
+											<h4 class="product_title">{{ food_items.title }}</h4>
+											<span class="numberof_item">{{ food_items.price }} </span>
+											{% include 'carts/update_cart.html' with food=food_items cart=cart in_cart=True %}
+										</div>
+									</div>
+									
+									
+								
+								<div class="cart_subtotal">
+									<h6>Total<span class="theme-cl">{{ total }}</span></h6>
+								</div>
+								
+								<div class="cart_action">
+									<ul>
+										<li><a href="{% url 'cart:home' %} " class="btn btn-go-cart btn-theme">View/Edit Cart</a></li>
+										<li><a href="{% url 'pages:checkout' %} " class="btn btn-checkout">Checkout Now</a></li>
+									</ul>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					{% endif %}
+
+				
+			{% endfor %} 
+				
+			</section>
+			<div class="clearfix"></div>
+{% endblock %}			
+
+			<!-- ======================== Fresh Vegetables & Fruits End ==================== -->
+			
+						<!-- ============================ Footer Start ================================== -->
+						

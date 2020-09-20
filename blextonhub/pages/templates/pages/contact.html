@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% url 'home' as home_url %}
+{% include 'partials/_header.html' %}
+
+
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- =========================== Breadcrumbs =================================== -->
+			<div class="breadcrumbs_wrap dark">
+				<div class="container">
+					<div class="row align-items-center">
+						
+						<div class="col-lg-12 col-md-12 col-sm-12">
+							<div class="text-center">
+								<h2 class="breadcrumbs_title">CONTACT US NOW</h2>
+								<nav aria-label="breadcrumb">
+								  <ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="{{ home_url }}"><i class="ti-home"></i></a></li>
+									<li class="breadcrumb-item active" aria-current="page">Contact</li>
+								  </ol>
+								</nav>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- =========================== Breadcrumbs =================================== -->
+			
+			
+			<!-- =========================== Error Page =================================== -->
+			<section class="gray">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-lg-12 col-md-12 text-center">
+							<h2 class="error_title">H<span class="text-primary">EL</span>P<i class="ti-help"></i></h2>
+							<p><span class="text-primary">Make</span> an enquiry here</p>
+							<a href="{{ home_url }}" class="btn btn-primary">Go To Home Page</a>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+{% endblock %}
